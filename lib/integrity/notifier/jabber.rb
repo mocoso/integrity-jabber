@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'integrity'
 require 'xmpp4r-simple'
 
@@ -8,7 +7,7 @@ module Integrity
       attr_reader :recipients
 
       def self.to_haml
-        File.read File.dirname(__FILE__) / "config.haml"
+        File.read(File.dirname(__FILE__) / "config.haml")
       end
       
       def initialize(build, config = {})
